@@ -60,13 +60,13 @@ class Solution:
             else:
                 for d in directions:
                     nextI, nextJ = i + d[0], j + d[1]
-                    if 0<=nextI<len(grid) and 0<=nextJ<len(grid[0]):
+                    if 0 <= nextI < len(grid) and 0 <= nextJ < len(grid[0]):
                         if grid[nextI][nextJ] == 1:
-                            grid[nextI][nextJ]=2
+                            grid[nextI][nextJ] = 2
                             fresh -= 1
-                            rottenList.append([nextI,nextJ])
+                            rottenList.append([nextI, nextJ])
 
-        return time if fresh==0 else -1
+        return time if fresh == 0 else -1
 
 
 if __name__ == '__main__':

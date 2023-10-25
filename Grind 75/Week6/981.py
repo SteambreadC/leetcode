@@ -3,7 +3,6 @@ from collections import deque, defaultdict
 from sortedcontainers import SortedDict
 
 
-
 class TimeMap:
 
     def __init__(self):
@@ -19,10 +18,10 @@ class TimeMap:
         else:
             if timestamp < ls[0][0]:
                 return ""
-            left, right = 0, len(ls)-1
+            left, right = 0, len(ls) - 1
 
             while left < right:
-                mid = int((left+right)/2)
+                mid = int((left + right) / 2)
                 if ls[mid][0] == timestamp:
                     return ls[mid][1]
                 if ls[mid][0] < timestamp:
@@ -30,6 +29,7 @@ class TimeMap:
                 elif ls[mid][0] > timestamp:
                     right = mid - 1
             return ls[right][1]
+
 
 '''
 class TimeMap:
@@ -51,11 +51,6 @@ class TimeMap:
                 if ls[i][1] <= timestamp:
                     return ls[i][0]
 '''
-
-
-
-
-
 
 if __name__ == '__main__':
     obj = TimeMap()
